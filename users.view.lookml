@@ -1,6 +1,35 @@
 - view: users
 
   fields:
+
+#-------------------------------------------------------------------------------
+
+  - dimension: age
+    description: The user's age.
+    sql: ${TABLE}.age
+    type: int
+
+  - dimension: city
+    description: The user city.
+    sql: ${TABLE}.city
+    type: string
+
+  - dimension: country
+    description: The user country.
+    sql: ${TABLE}.country
+    type: string
+
+  - dimension_group: created_at
+    datatype: datetime
+    description: User record creation timestamp.
+    sql: ${TABLE}.created_at
+    timeframes: [ date
+                , month
+                , time
+                , week
+                , year
+                ]
+    type: time
   
   - dimension: email
     description: The user email.
@@ -27,6 +56,13 @@
     description: The user last name.
     sql: ${TABLE}.last_name
     type: string
+
+  - dimension: state
+    description: The user state (location).
+    sql: ${TABLE}.state
+    type: string
+
+#-------------------------------------------------------------------------------
     
   - measure: count
     description: Number of users.
