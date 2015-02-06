@@ -47,11 +47,40 @@
 
 #-------------------------------------------------------------------------------
 
-    - measure: brand_count
+    - measure: count
+      description: The product count.
+      drill_fields: [item_info*]
+      type: count
+
+    - measure: count_brand
       description: The number of brands.
       sql: ${brand}
       type: count_distinct
 
-    - measure: count
-      description: The product count.
+    - measure: count_pants
+      description: The number of pants.
+      drill_fields: [item_info*, sku_etc*]
+      filters:
+        category: Pants
       type: count
+
+    - measure: count_shorts
+      description: The number of shorts.
+      drill_fields: [id, item_name, brand]
+      filters:
+        category: Shorts
+      type: count
+
+    - measure: count_skirts
+      description: The number of skirts.
+      drill_fields: [skus_etc*, brand]
+      filters:
+        category: Skirts
+      type: count
+
+#-------------------------------------------------------------------------------
+
+  sets:
+
+    item_info: [id, item_name, brand, department, category]
+    sku_etc: [id, sku]
