@@ -64,6 +64,11 @@
     sql: ${TABLE}.last_name
     type: string
 
+  - dimension: over_40
+    description: User over 40?
+    sql: ${age} > 40
+    type: yesno
+
   - dimension: state
     description: The user state (location).
     sql: ${TABLE}.state
