@@ -50,7 +50,7 @@
     description: The user id.
     primary_key: true
     sql: ${TABLE}.id
-    type: string
+    type: int
     
   - dimension: first_name
     description: The user first name.
