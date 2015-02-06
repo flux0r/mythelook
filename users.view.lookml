@@ -99,13 +99,13 @@
   - measure: count_in_ca
     description: Number of users in California.
     filters:
-      state: California
+      state: "California"
     type: count
 
   - measure: count_in_ca_or_ny
     description: Number of users in California or New York.
     filters:
-      state: New York,California
+      state: "New York", "California"
     type: count
 
   - measure: count_in_ny
@@ -113,3 +113,15 @@
     filters:
       state: New York
     type: count
+
+  - measure: count_younger_than_40
+    description: Number of users younger than 40.
+    filters:
+      age: "< 40"
+    type: count
+
+  - measure: pct_younger_than_40
+    description: The share of users younger than 40.
+    format: "%.2f%"
+    sql: 100.0*${count_younger_than_40}/nullif(${count}, 0)
+    type: number
