@@ -67,6 +67,12 @@
     sql: ${TABLE}.state
     type: string
 
+  - dimension: tiered_age
+    description: The user age broken into tiers.
+    sql: ${age}
+    tiers: [20, 40, 60, 80]
+    type: tier
+
 #-------------------------------------------------------------------------------
    
   - measure: average_age
