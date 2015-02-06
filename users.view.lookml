@@ -19,13 +19,17 @@
     sql: ${TABLE}.country
     type: string
 
-  - dimension_group: created_at
+  - dimension_group: created
     datatype: datetime
     description: User record creation timestamp.
     sql: ${TABLE}.created_at
     timeframes: [ date
+                , day_of_week
+                , hour
+                , hour_of_day
                 , month
                 , time
+                , time_of_day
                 , week
                 , year
                 ]
