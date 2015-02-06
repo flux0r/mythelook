@@ -30,6 +30,7 @@
                 , week
                 , year
                 ]
+    type: time
 
   - dimension: sale_price
     description: The sale price of the order item.
