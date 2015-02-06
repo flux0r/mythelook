@@ -35,6 +35,11 @@
     description: The user email.
     sql: ${TABLE}.email
     type: string
+
+  - dimension: full_name
+    description: The user's first and last name.
+    sql: ${TABLE}.first_name || ' ' || ${TABLE}.last_name
+    type: string
     
   - dimension: gender
     description: The user gender.
