@@ -38,7 +38,7 @@
 
   - dimension: full_name
     description: The user's first and last name.
-    sql: ${TABLE}.first_name || ' ' || ${TABLE}.last_name
+    sql: concat(${TABLE}.first_name, ' ', ${TABLE}.last_name)
     type: string
     
   - dimension: gender
