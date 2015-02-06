@@ -50,7 +50,7 @@
       sale_price: ">100.0"
     format: "%.2f"
     sql: ${sale_price}
-    type: number
+    type: sum
 
   - measure: total_sales
     decimals: 2
