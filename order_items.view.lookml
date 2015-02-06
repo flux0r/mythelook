@@ -44,16 +44,36 @@
     description: Number of order items.
     type: count
 
+  - measure: count_expensive_items
+    description: Number of order items with a price over 100.0.
+    filters:
+      sale_price: "> 100.0"
+    type: count
+
+  - measure: pct_expensive_items
+    description: Share of order items that have a price over 100.0.
+    filters:
+      sale_price: "> 100.0"
+    format: "%.1f%"
+    sql: 100.0*${count_expensive_items}/nullif(${count}, 0)
+    type: number
+
+  - measure: total_sales
+    description: The total sale price for the order items.
+    format: "$%.2f"
+    sql: ${sale_price}
+    type: sum
+
   - measure: total_sales_expensive_items
     description: Sum of sales price for items over $100.
     filters:
-      sale_price: ">100.0"
+      sale_price: "> 100.0"
     format: "%.2f"
     sql: ${sale_price}
     type: sum
 
-  - measure: total_sales
-    decimals: 2
-    description: The total sale price for the order items.
+  - measure: total_sales_pound_sign
+    description: The total sale price for the order items with a £ sign.
+    format: "£ %.2f"
     sql: ${sale_price}
     type: sum

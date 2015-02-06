@@ -105,7 +105,7 @@
   - measure: count_in_ca_or_ny
     description: Number of users in California or New York.
     filters:
-      state: "New York","California"
+      state: '"New York", "California"'
     type: count
 
   - measure: count_in_ny
