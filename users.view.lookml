@@ -68,7 +68,13 @@
     type: string
 
 #-------------------------------------------------------------------------------
-    
+   
+  - measure: average_age
+    decimals: 1
+    description: Average user age.
+    sql: ${age}
+    type: average
+
   - measure: count
     description: Number of users.
     drill_fields: [ id
