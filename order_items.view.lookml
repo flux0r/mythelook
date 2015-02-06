@@ -52,8 +52,6 @@
 
   - measure: pct_expensive_items
     description: Share of order items that have a price over 100.0.
-    filters:
-      sale_price: "> 100.0"
     format: "%.1f%"
     sql: 100.0*${count_expensive_items}/nullif(${count}, 0)
     type: number
