@@ -44,7 +44,15 @@
     description: Number of order items.
     type: count
 
-  - measure: total_sale_price
+  - measure: total_sales_expensive_items
+    description: Sum of sales price for items over $100.
+    filters:
+      sale_price: ">100.0"
+    format: "%.2f"
+    sql: ${sale_price}
+    type: string
+
+  - measure: total_sales
     decimals: 2
     description: The total sale price for the order items.
     sql: ${sale_price}
