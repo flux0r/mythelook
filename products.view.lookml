@@ -1,4 +1,4 @@
-- view: users
+- view: products
 
   fields:
 
