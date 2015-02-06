@@ -33,6 +33,7 @@
     type: time
 
   - dimension: sale_price
+    decimals: 2
     description: The sale price of the order item.
     sql: ${TABLE}.sale_price
     type: number
@@ -44,6 +45,7 @@
     type: count
 
   - measure: total_sale_price
+    decimals: 2
     description: The total sale price for the order items.
     sql: ${sale_price}
     type: sum
