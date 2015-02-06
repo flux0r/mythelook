@@ -26,10 +26,8 @@
     timeframes: [ date
                 , day_of_week
                 , hour
-                , date_hour_of_day
                 , month
                 , time
-                , date_time_of_day
                 , week
                 , year
                 ]
