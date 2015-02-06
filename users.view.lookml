@@ -26,10 +26,10 @@
     timeframes: [ date
                 , day_of_week
                 , hour
-                , hour_of_day
+                , date_hour_of_day
                 , month
                 , time
-                , time_of_day
+                , date_time_of_day
                 , week
                 , year
                 ]
