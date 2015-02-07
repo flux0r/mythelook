@@ -12,9 +12,11 @@
     - dimension: brand_linked
       description: The product brand.
       html: |
-        <p>Non-linked value: {{ value }}</p>
-        <p>Linked-value: {{ linked_value }}</p>
-        <p><a href="http://google.com/?q={{ value }}">Search Google for '{{ value }}'</a></p>
+        <div>
+          <p>Non-linked value: {{ value }}</p>
+          <p>Linked-value: {{ linked_value }}</p>
+          <p><a href="http://google.com/?q={{ value }}">Search Google for '{{ value }}'</a></p>
+        </div>
       sql: ${TABLE}.brand
       type: string
 
@@ -101,6 +103,11 @@
       sql: ${brand}
       type: count_distinct
 
+    - measure: count_categories
+      description: The number of product categories.
+      sql: ${category}
+      type: count_distinct
+
     - measure: count_pants
       description: The number of pants.
       drill_fields: [item_info*, sku_etc*]
@@ -121,6 +128,11 @@
       filters:
         category: Skirts
       type: count
+
+    - measure: list_category
+      description: A list of product categories.
+      list_field: category
+      type: list
 
 #-------------------------------------------------------------------------------
 
