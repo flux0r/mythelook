@@ -8,6 +8,15 @@
       description: The product brand.
       sql: ${TABLE}.brand
       type: string
+    
+    - dimension: brand_linked
+      description: The product brand.
+      html: |
+        <p>Non-linked value: {{ value }}</p>
+        <p>Linked-value: {{ linked_value }}</p>
+        <p><a href="http://google.com/?#q={{ value }}">Search Google for '{{ value }}'</a></p>
+      sql: ${TABLE}.brand
+      type: string
 
     - dimension: brand_centered
       description: The product brand.
