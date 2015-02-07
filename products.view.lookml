@@ -30,14 +30,14 @@
       sql: ${TABLE}.brand
       type: string
 
-    - dimension: brand_big_monospace
+    - dimension: brand_monospace
       description: The product brand.
       html: |
         <p style="font-family: monospace;">{{ rendered_value }}</p>
       sql: ${TABLE}.brand
       type: string
 
-    - dimension: brand_big_white_on_green
+    - dimension: brand_white_on_green
       description: The product brand.
       html: |
         <p style="color: white; background-color: darkgreen;">{{ rendered_value }}</p>
