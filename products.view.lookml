@@ -8,6 +8,41 @@
       description: The product brand.
       sql: ${TABLE}.brand
       type: string
+
+    - dimension: brand_centered
+      description: The product brand.
+      html: |
+        <p style="text-align: center;">{{ rendered_value }}</p>
+      sql: ${TABLE}.brand
+      type: string
+
+    - dimension: brand_red
+      description: The product brand.
+      html: |
+        <p style="color: red;">{{ rendered_value }}</p>
+      sql: ${TABLE}.brand
+      type: string
+
+    - dimension: brand_big_text
+      description: The product brand.
+      html: |
+        <p style="font-size: 3em;">{{ rendered_value }}</p>
+      sql: ${TABLE}.brand
+      type: string
+
+    - dimension: brand_big_monospace
+      description: The product brand.
+      html: |
+        <p style="font-family: monospace;">{{ rendered_value }}</p>
+      sql: ${TABLE}.brand
+      type: string
+
+    - dimension: brand_big_white_on_green
+      description: The product brand.
+      html: |
+        <p style="color: white; background-color: darkgreen;">{{ rendered_value }}</p>
+      sql: ${TABLE}.brand
+      type: string
     
     - dimension: category
       description: The product category.
