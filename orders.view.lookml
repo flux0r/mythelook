@@ -15,6 +15,7 @@
       description: Order creation timestamp.
       sql: ${TABLE}.created_at
       timeframes: [date, month, time, week]
+      type: time
 
     - dimension: status
       description: The order status.
