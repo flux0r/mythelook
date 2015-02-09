@@ -9,3 +9,11 @@
 - explore: users
 
 - explore: products
+
+- explore: orders
+  conditionally_filter:
+    created_date: 10 days
+    unless: [id]
+  joins:
+    - join: users
+      foreign_key: id
