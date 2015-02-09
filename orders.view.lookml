@@ -1,4 +1,4 @@
-view: orders
+- view: orders
 
   fields:
 
