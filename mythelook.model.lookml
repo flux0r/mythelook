@@ -12,8 +12,8 @@
 
 - explore: orders
   conditionally_filter:
-    created: 10 days
+    created_date: 10 days
     unless: [id]
   joins:
     - join: users
-      foreign_key: id
+      foreign_key: user_id
