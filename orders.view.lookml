@@ -32,3 +32,9 @@
     - measure: count
       description: Number of orders.
       type: count
+
+    - measure: wa_order_user_age
+      description: Weighted average of user age by number of orders.
+      format: "%.1"
+      sql: ${users.age}
+      type: average

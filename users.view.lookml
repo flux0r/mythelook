@@ -82,9 +82,9 @@
 
 #-------------------------------------------------------------------------------
    
-  - measure: average_age
-    decimals: 1
+  - measure: avg_age
     description: Average user age.
+    format: "%.1f"
     sql: ${age}
     type: average
 
