@@ -38,6 +38,16 @@
     sql: ${TABLE}.email
     type: string
 
+  - dimension: email_domain
+    description: The domain of the user email address.
+    sql: >
+      case
+        when position('@' in ${email}) = 0
+          then ''
+        else lower(substring(email from position('@' in ${email}) + 1))
+      end
+    type: string
+
   - dimension: full_name
     description: The user's first and last name.
     sql: concat(${TABLE}.first_name, ' ', ${TABLE}.last_name)
