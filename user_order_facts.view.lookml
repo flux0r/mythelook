@@ -24,7 +24,8 @@
     type: int
 
   - dimension: lifetime_sales
-    description: The total amount of sales for the user (not including returned items).
+    description: >
+      The total amount of sales for the user (not including returned items).
     sql: ${TABLE}.lifetime_sales
     type: number
 
