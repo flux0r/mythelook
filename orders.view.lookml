@@ -14,7 +14,7 @@
       datatype: datetime
       description: Order creation timestamp.
       sql: ${TABLE}.created_at
-      timeframes: [date, month, time, week]
+      timeframes: [date, month, time, week, year]
       type: time
 
     - dimension: status
