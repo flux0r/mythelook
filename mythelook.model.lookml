@@ -17,5 +17,7 @@
   joins:
     - join: users
       foreign_key: user_id
+    - join: seq_order_user
+      foreign_key: id
 
 - explore: user_order_facts
