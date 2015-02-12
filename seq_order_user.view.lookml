@@ -13,6 +13,7 @@
   fields:
   - dimension: id
     description: The order id.
+    primary_key: true
     sql: ${TABLE}.id
     type: int
   - dimension: seq
