@@ -10,12 +10,12 @@
               ) seq
       from
               orders
-    fields:
-    - dimension: id
-      description: The order id.
-      sql: ${TABLE}.id
-      type: int
-    - dimension: seq
-      description: The sequence number of the order for the user.
-      sql: ${TABLE}.seq
-      type: int
+  fields:
+  - dimension: id
+    description: The order id.
+    sql: ${TABLE}.id
+    type: int
+  - dimension: seq
+    description: The sequence number of the order for the user.
+    sql: ${TABLE}.seq
+    type: int
