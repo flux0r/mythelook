@@ -27,6 +27,17 @@
       sql: ${TABLE}.user_id
       type: int
 
+    - dimension: seq_user_order
+      description: The sequence of the order for the user by order date.
+      sql: |
+        (
+                select count(*)
+                from orders o
+                where o.id <= ${TABLE}.id and
+                        o.user_id = ${TABLE}.user_id
+        )
+      type: int
+
 #-------------------------------------------------------------------------------
 
     - measure: count
